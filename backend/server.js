@@ -28,11 +28,13 @@ const server = http.createServer(app);
 // Socket.IO Setup
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"]
+    origin: "https://fund-raise-brown.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
+  
 // Make Socket.IO available in controllers
 app.set("io", io);
 
@@ -46,7 +48,10 @@ io.on("connection", (socket) => {
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://fund-raise-brown.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // Database Connection
