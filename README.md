@@ -230,3 +230,11 @@ Developed as a MERN Stack Capstone Project.
 
 **GitHub Repository:**  
 https://github.com/jiyasingh0987/FundRaise
+
+## Author
+
+**Jiya Singh**
+
+BCA Student | MERN Stack Capstone Project
+
+GitHub: https://github.com/jiyasingh0987
