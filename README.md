@@ -1,4 +1,3 @@
-
 # FundRaise – Crowdfunding Platform
 
 FundRaise is a MERN Stack based crowdfunding platform that connects people who need financial support with individuals who want to contribute towards meaningful causes.
@@ -23,7 +22,7 @@ The platform allows creators to submit fundraising campaigns, supporters to cont
 
 ### 3. Supporter Features
 - Browse approved campaigns
-- Contribute to campaigns using mock payments
+- Contribute using mock payments
 - View personal pledge history
 - Access supporter dashboard
 - Track total contributions
@@ -74,7 +73,6 @@ The platform allows creators to submit fundraising campaigns, supporters to cont
 
 ```text
 FundRaise/
-│
 ├── backend/
 │   ├── config/
 │   ├── controllers/
@@ -96,6 +94,9 @@ FundRaise/
 │   │   └── main.jsx
 │   └── package.json
 │
+├── screenshots/
+├── ER_Diagram.md
+├── LICENSE
 ├── .gitignore
 └── README.md
 ```
@@ -105,7 +106,7 @@ FundRaise/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/jiyasingh0987/FundRaise.git
 cd FundRaise
 ```
 
@@ -116,7 +117,9 @@ cd backend
 npm install
 ```
 
-Create a `.env` file inside the backend folder and configure:
+Create a `.env` file inside the backend folder using `.env.example` as a reference.
+
+Configure the following variables:
 
 ```env
 PORT=5000
@@ -144,17 +147,10 @@ npm install
 npm run dev
 ```
 
-The frontend will run on:
+**Application URLs**
 
-```text
-http://localhost:5173
-```
-
-The backend will run on:
-
-```text
-http://localhost:5000
-```
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000
 
 ## User Roles
 
@@ -171,10 +167,15 @@ http://localhost:5000
 | POST | `/api/auth/register` | Register user |
 | POST | `/api/auth/login` | Login user |
 | POST | `/api/auth/refresh` | Refresh access token |
+| GET | `/api/users/profile` | Get user profile |
+| GET | `/api/users/creator` | Verify creator access |
+| GET | `/api/users/admin` | Verify admin access |
 | GET | `/api/campaigns` | Get approved campaigns |
 | POST | `/api/campaigns` | Create campaign |
 | GET | `/api/campaigns/pending` | Get pending campaigns |
 | GET | `/api/campaigns/my-campaigns` | Get creator campaigns |
+| PUT | `/api/campaigns/:id` | Update campaign |
+| DELETE | `/api/campaigns/:id` | Delete campaign |
 | PATCH | `/api/campaigns/:id/status` | Approve or reject campaign |
 | POST | `/api/pledges/:campaignId` | Create pledge |
 | GET | `/api/pledges/my-pledges` | Get supporter pledges |
@@ -187,11 +188,31 @@ http://localhost:5000
 - Campaign
 - Pledge
 
-MongoDB is used to store user accounts, campaign information, and pledge records.
+MongoDB stores user accounts, campaign information, and pledge records.
 
 ## Payment Information
 
 FundRaise currently uses a mock payment system for demonstration purposes. No real financial transactions are processed.
+
+## Postman API Testing
+
+The project includes Postman testing for 18 API operations covering:
+
+- User registration and login
+- User profile
+- Campaign creation and listing
+- Campaign approval and rejection
+- Campaign update and deletion
+- Pledge creation and history
+- Creator and supporter dashboards
+- Access token refresh
+- Role-based access verification
+
+All API testing screenshots are available in the `screenshots` folder.
+
+## Database Design
+
+The database relationship diagram is available in [ER_Diagram.md](ER_Diagram.md).
 
 ## Future Enhancements
 
@@ -206,3 +227,6 @@ FundRaise currently uses a mock payment system for demonstration purposes. No re
 **FundRaise – Crowdfunding Platform**
 
 Developed as a MERN Stack Capstone Project.
+
+**GitHub Repository:**  
+https://github.com/jiyasingh0987/FundRaise
