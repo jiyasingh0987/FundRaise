@@ -16,7 +16,7 @@ function MyPledges() {
     const fetchPledges = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/pledges/my-pledges",
+          "https://fundraise-backend-6o4a.onrender.com/api/pledges/my-pledges",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`

@@ -11,7 +11,7 @@ function Campaigns() {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/campaigns");
+        const response = await fetch("https://fundraise-backend-6o4a.onrender.com/api/campaigns");
 
         if (!response.ok) {
           throw new Error("Unable to load campaigns");

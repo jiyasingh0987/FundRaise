@@ -20,7 +20,7 @@ function SupporterDashboard() {
     const fetchDashboard = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/dashboard/supporter",
+          "https://fundraise-backend-6o4a.onrender.com/api/dashboard/supporter",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`

@@ -15,7 +15,7 @@ function Dashboard() {
     const fetchMyCampaigns = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/campaigns/my-campaigns",
+          "https://fundraise-backend-6o4a.onrender.com/api/campaigns/my-campaigns",
           {
             headers: {
               Authorization: `Bearer ${accessToken}`

@@ -16,7 +16,7 @@ function CampaignDetails() {
   useEffect(() => {
     const fetchCampaign = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/campaigns");
+        const response = await fetch("https://fundraise-backend-6o4a.onrender.com/api/campaigns");
         const data = await response.json();
 
         if (!response.ok) {
@@ -48,7 +48,7 @@ function CampaignDetails() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/pledges/${id}`,
+        `https://fundraise-backend-6o4a.onrender.com/api/pledges/${id}`,
         {
           method: "POST",
           headers: {

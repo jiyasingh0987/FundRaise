@@ -14,7 +14,7 @@ function AdminDashboard() {
   const fetchPendingCampaigns = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/campaigns/pending",
+        "https://fundraise-backend-6o4a.onrender.com/api/campaigns/pending",
         {
           headers: {
             Authorization: `Bearer ${accessToken}`
@@ -43,7 +43,7 @@ function AdminDashboard() {
   const updateStatus = async (id, status) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/campaigns/${id}/status`,
+        `https://fundraise-backend-6o4a.onrender.com/api/campaigns/${id}/status`,
         {
           method: "PATCH",
           headers: {

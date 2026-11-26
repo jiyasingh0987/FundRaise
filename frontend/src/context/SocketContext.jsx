@@ -9,7 +9,7 @@ export function SocketProvider({ children }) {
   const [notification, setNotification] = useState("");
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://fundraise-backend-6o4a.onrender.com");
 
     setSocket(newSocket);
 

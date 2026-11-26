@@ -14,7 +14,7 @@ function Home() {
     const fetchCampaigns = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/campaigns"
+          "https://fundraise-backend-6o4a.onrender.com/api/campaigns"
         );
 
         if (!response.ok) {
