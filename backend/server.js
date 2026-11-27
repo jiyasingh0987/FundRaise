@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const http = require("http");
 const dns=require("dns");
-dns.setServers(['1.1.1.1','8,8,8,8'])
+dns.setServers(['1.1.1.1','8.8.8.8'])
 const { Server } = require("socket.io");
 
 dotenv.config();
