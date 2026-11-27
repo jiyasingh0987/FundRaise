@@ -48,10 +48,7 @@ io.on("connection", (socket) => {
 });
 
 // Middleware
-app.use(cors({
-  origin: "https://fundraise-frontend-nine.vercel.app",
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 // Database Connection
