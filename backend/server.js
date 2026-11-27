@@ -28,7 +28,7 @@ const server = http.createServer(app);
 // Socket.IO Setup
 const io = new Server(server, {
   cors: {
-    origin: "https://fund-raise-gsjr.vercel.app",
+    origin: "https://fundraise-frontend-nine.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
@@ -49,7 +49,7 @@ io.on("connection", (socket) => {
 
 // Middleware
 app.use(cors({
-  origin: "https://fund-raise-gsjr.vercel.app",
+  origin: "https://fundraise-frontend-nine.vercel.app",
   credentials: true
 }));
 app.use(express.json());
